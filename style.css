@@ -188,19 +188,15 @@ input {
 }
 
 #greeting {
-
-    color: goldenrod;
-
+    color: gold !important;
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.8),
+        0 0 20px rgba(255,255,255,0.6);
     font-size: 24px;
-
     font-weight: bold;
-
     margin-top: 20px;
-
     opacity: 0;
-
     transform: translateY(20px);
-
-    transition: 0.5s;
+    transition: 0.5s
 
 }
