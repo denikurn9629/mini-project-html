@@ -83,14 +83,28 @@
     //Greeting
     const greetButton= document.getElementById("greetBtn");
 
-    greetButton.addEventListener("click", function() {
+greetButton.addEventListener("click", function() {
 
-        const name = document.getElementById("nameInput").value;
+    const name = document.getElementById("nameInput").value;
 
-        document.getElementById("greeting").textContent =
-            "Halo " + name + " 👋🏻";
+    const greeting = document.getElementById("greeting");
 
-    });
+    // Reset animation
+    greeting.style.opacity = "0";
+
+    greeting.style.transform = "translateY(20px)";
+
+    setTimeout(function() {
+
+        greeting.textContent = "Halo " + name + " 👋🏻";
+
+        greeting.style.opacity = "1";
+
+        greeting.style.transform = "translateY(0)";
+
+    }, 100);
+
+});
 
 </script>
 
