@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    transition: 0.5s;
 }
 
 /* Hero Section */
@@ -72,4 +73,36 @@ body {
     .title {
         font-size: 28px;
     }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: skyblue;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.card {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.dark {
+    background-color: #111;
+    color: white;
 }
