@@ -4,12 +4,29 @@
     <title>My Remote Developer Journey</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <section class="hero">
         <h1 class="title">Deni Kurniawan</h1>
         <p class="subtitle">Future Remote Developer - USA Market</p>
-        <button class="btn">Hire Me</button>
+        <button id="hireBtn"class="btn">
+            Hire Me
+        </button>
+        <button id="darkModeBtn" class="btn">
+            Dark Mode
+        </button>
+
+        <br><br>
+
+        <input type="text" id="nameInput" placeholder="Masukan nama">
+
+    <button id="greetBtn" class="btn">
+        Sapa saya
+    </button>
+
+    <p id="greeting"></p>
+    
     </section>
 
     <section class="skills">
@@ -26,8 +43,56 @@
         <div class="card">
             <h3>JavaScript</h3>
             <p>Interactive website & dynamic content.</p>
-        </div>
+        </div>    
     </section>
+
+    <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+</div>
+
+<script>
+
+    //Hire Me
+    const button = document.getElementById("hireBtn");
+
+    button.addEventListener("click", function() {
+        alert("Terima kasih sudah menghubungi Deni Kurniawan 😎");
+    });
+
+    //Dark Mode
+    const darkButton = document.getElementById("darkModeBtn")
+
+    darkButton.addEventListener("click", function() {
+
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+
+            darkButton.textContent = "☀ Light Mode"
+
+        } else {
+
+            darkButton.textContent = "🌙 Dark Mode"
+        
+        }
+        
+    });
+
+    //Greeting
+    const greetButton= document.getElementById("greetBtn");
+
+    greetButton.addEventListener("click", function() {
+
+        const name = document.getElementById("nameInput").value;
+
+        document.getElementById("greeting").textContent =
+            "Halo" + name + " 👋🏻";
+
+    });
+
+</script>
 
 </body>
 </html>
